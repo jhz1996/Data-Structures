@@ -1,6 +1,10 @@
-# Data-Structures
+# [Data-Structures](https://github.com/jhz1996/Data-Structures)
 
 Repository for testing and playing with data structures.
+
+## Contributers
+- [@corya14](https://github.com/corya14)
+- [@jhz1996](https://github.com/jhz1996)
 
 ## Data Structure 1
 Description
