@@ -3,9 +3,21 @@
 Repository for testing and playing with data structures.
 
 ## Data Structure 1
-
 Description
 
-## Data Structure 2
+### Construction
+```
+  ds = new DataStructure1(args)
+```
 
-Description
+### Methods
+#### Method 1
+  Method 1 description
+  ```
+  object.method1(args)
+  ```
+#### Method 2
+  Method 2 description
+  ```
+  object.method2(args)
+  ```
