@@ -9,6 +9,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <cstring>
+#include<algorithm>
+#include<string>
 
 using namespace std;
 
@@ -49,17 +51,18 @@ void QLList::EnQueue(int data){
 	newNode->data = data;
 	newNode->next = NULL;
 	if (Q->rear){
+		while (Q->rear->next != NULL){
+			Q->rear = Q->rear->next;
+
+		}
 		Q->rear->next = newNode;
-		
 
 	}
 	
 	else if (Q->front == NULL){
-		/*Q->rear = newNode;*/
 		Q->front = newNode;
 		Q->rear = Q->front;
 	}
-
 
 }
 
@@ -103,5 +106,53 @@ void QLList::DeleteQueue(){
 			t = t->next;
 		}
 	}
+
+}
+
+int QLList::lengthOfQueue(){
+	int count = 0;
+	temp = Q->front;
+	while (temp!= NULL){
+
+		temp = temp->next;
+		++count;
+
+	}
+
+
+	return count;
+}
+
+void QLList::push_front(int data){
+	struct ListNode* newNode;
+	newNode = (ListNode*)malloc(sizeof(struct ListNode));
+	
+	newNode->data = data;
+	newNode->next = NULL;
+	temp = Q->front;
+	if (Q->front != NULL){
+		
+		Q->front = newNode;
+		Q->front->next = temp;
+	}
+
+	else{
+		Q->front = newNode;
+		Q->front->next = NULL;
+	}
+
+
+}
+
+void QLList::pop_back(){
+	temp = Q->front;
+	while (temp->next != Q->rear){
+		temp = temp->next;
+	}
+
+	free(temp->next);
+	temp->next = NULL;
+	
+
 
 }
