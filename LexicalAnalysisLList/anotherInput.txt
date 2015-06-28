@@ -1,0 +1,24 @@
+void main()
+{
+	BEGIN
+	char d='\\lol';
+	var a bool;
+	IF(a){
+	int _000 =  8;
+	float b = 9.9 + 1.0;
+	/*this is a test program
+	ignore these comments*/
+	int c = 0.987;
+	double dd;
+	
+
+	dd += 9.9;
+	if (dd != 0)
+		cout<<"Error";
+	
+	}elseif(b){
+	
+	}
+
+	end
+}
